@@ -2,7 +2,7 @@
 
 Repositorio oficial del protocolo de trabajo para **Agent Mode** en los proyectos de JP.
 
-La metodología vive en estos archivos, **no en un modelo específico**. El arquitecto es un rol, no una IA concreta. El objetivo es que cualquier ejecutor (Cursor hoy, otro agente mañana) trabaje con el mismo estándar de análisis, ejecución, verificación y reporte.
+La metodología vive en estos archivos, **no en un modelo específico**. El arquitecto es un rol, no una IA concreta. El objetivo es que cualquier ejecutor (Cursor, Codex, Claude Code u otro agente) trabaje con el mismo estándar de análisis, ejecución, verificación y reporte.
 
 ---
 
@@ -161,7 +161,7 @@ El **motor del ciclo** en versión genérica: la regla ejecutable
 (ESTADO → RUTINA → VERIFICACIÓN → CRITERIO DE SALIDA) que convierte la
 prosa de `01`+`02` en un ciclo mecánico que corre en cada sesión.
 
-Se instala copiándolo a `.cursor/rules/loop.mdc` (Cursor) o integrándolo
+Se instala copiándolo a `.cursor/rules/loop.mdc` (en Cursor) o integrándolo
 en `AGENTS.md` / `CLAUDE.md`, y reemplazando los placeholders
 `{{TEST_CMD}}`, `{{BUILD_CMD}}`, `{{VERIFY_CMD}}` con los comandos
 reales del proyecto.
@@ -170,7 +170,7 @@ reales del proyecto.
 
 # Instalación en un proyecto nuevo
 
-1. Abre un proyecto en Cursor.
+1. Abre un proyecto en tu IDE con agente (Cursor, Codex, Claude Code, etc.).
 
 2. Copia el contenido de:
 
@@ -178,9 +178,9 @@ reales del proyecto.
 prompts/03-instruccion-de-activacion.md
 ```
 
-3. Pégalo en Cursor Agent Mode.
+3. Pégalo en el chat del ejecutor (Agent Mode o equivalente).
 
-4. Cursor debe:
+4. El ejecutor debe:
 
 * leer las reglas de:
 
@@ -244,14 +244,14 @@ Nunca realizar sin autorización explícita de JP:
 Después de cualquier cambio estructural:
 
 1. Abrir un proyecto vacío.
-2. Abrir Cursor.
+2. Abrir el ejecutor (Cursor, Codex, Claude Code u otro).
 3. Pegar el contenido de:
 
 ```text
 prompts/03-instruccion-de-activacion.md
 ```
 
-La activación es correcta únicamente si Cursor:
+La activación es correcta únicamente si el ejecutor:
 
 * encuentra los archivos en sus rutas actuales;
 * cita reglas reales de `rules/01-identidad-del-ejecutor.md`;
@@ -269,9 +269,9 @@ en tiempo real de un proyecto activo. Regla de uso:
 
 | Situación | Qué hacer |
 |---|---|
-| **Proyecto nuevo** | Parte desde `instruccionescursor` (este repo) vía `prompts/03`. |
+| **Proyecto nuevo** | Parte desde `instruccionesAgentes` (este repo) vía `prompts/03`. |
 | **Proyecto activo** | Puede tener reglas más nuevas en su propio `.agents/cursor-rules/` o `.cursor/rules/` — evolucionadas localmente (ver `references/bibliografia-protocolo.md`, sección 6-bis del `02` como ejemplo real). |
-| **Propagación** | Cuando una mejora local se prueba y funciona, JP decide si vuelve a `instruccionescursor` para que el próximo proyecto parta ya actualizado. No es automático. |
+| **Propagación** | Cuando una mejora local se prueba y funciona, JP decide si vuelve a `instruccionesAgentes` para que el próximo proyecto parta ya actualizado. No es automático. |
 | **Riesgo si no se sincroniza** | Un proyecto nuevo que instala solo desde este repo puede recibir una versión **stale** si un proyecto anterior avanzó las reglas y esa mejora nunca volvió aquí. |
 
 ---
@@ -298,4 +298,4 @@ reuso, no acceso de escritura directa al repositorio oficial.
 * ✅ Evaluación de calibración
 * ✅ Bibliografía
 
-Este repositorio constituye la fuente de verdad para la metodología de trabajo de Cursor en los proyectos de JP.
+Este repositorio constituye la fuente de verdad para la metodología de trabajo de los agentes ejecutores en los proyectos de JP.

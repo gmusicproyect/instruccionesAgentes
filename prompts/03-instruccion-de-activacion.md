@@ -9,7 +9,7 @@
 
 ## El bloque (copiar desde aquí)
 
-Lee del repositorio https://github.com/gmusicproyect/instruccionescursor
+Lee del repositorio https://github.com/gmusicproyect/instruccionesAgentes
 los archivos `rules/01-identidad-del-ejecutor.md` y
 `rules/02-protocolo-criterio-fable.md` — son tus reglas de identidad y método.
 NO leas la carpeta `tests/`: contiene pruebas que JP administra y leerlas
@@ -75,7 +75,7 @@ desde su memoria del chat.
 
 ## Verificación de la activación
 
-Cursor debe responder con: (a) una cita real de cada archivo — si las citas
+El ejecutor debe responder con: (a) una cita real de cada archivo — si las citas
 son genéricas o inventadas, no los leyó: pídele que los abra de nuevo;
 (b) el punto 3 reformulado; (c) NINGUNA acción ejecutada todavía.
 
