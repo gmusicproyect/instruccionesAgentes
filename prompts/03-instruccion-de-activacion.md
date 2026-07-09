@@ -78,8 +78,7 @@ Luego DETENTE. No ejecutes FASE B hasta que JP responda exactamente:
 
 ### FASE B — INSTALACIÓN / SOLO DESPUÉS DE "OK INSTALA"
 
-Ejecuta esta fase únicamente cuando JP haya dicho **OK INSTALA**
-(o equivalente explícito: "OK FASE B", "autorizo instalación").
+Ejecuta esta fase únicamente cuando JP haya dicho exactamente **OK INSTALA**.
 
 **B.1 — Estado del proyecto**
 Si no existe `.agents/PROJECT_STATUS.md`, créalo usando el template de
