@@ -240,6 +240,18 @@ Si alguno de esos puntos falla, existe una referencia rota en el repositorio.
 
 ---
 
+# Licencia y aportes
+
+Este repositorio se distribuye bajo licencia **MIT** (ver `LICENSE`).
+Cualquiera puede usar, copiar o adaptar este contenido dando crédito al
+autor original.
+
+**Aportes de terceros:** se reciben vía Pull Request. Ningún cambio entra
+a `main` sin revisión y aprobación de JP — la licencia da permiso de
+reuso, no acceso de escritura directa al repositorio oficial.
+
+---
+
 # Estado
 
 * ✅ Identidad del ejecutor
