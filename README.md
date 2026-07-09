@@ -29,7 +29,7 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 ├── README.md
 │
 ├── rules/
-│   ├── 01-identidad-como-trabaja-claude.md
+│   ├── 01-identidad-del-ejecutor.md
 │   └── 02-protocolo-criterio-fable.md
 │
 ├── prompts/
@@ -52,9 +52,11 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 
 Reglas permanentes que definen la identidad y el método del ejecutor.
 
-### 01-identidad-como-trabaja-claude.md
+### 01-identidad-del-ejecutor.md
 
-Define la forma de pensar del ejecutor:
+Define la forma de pensar del ejecutor (Cursor, Codex, o cualquier
+agente futuro — el nombre es histórico: se extrajo observando el
+método de Claude como arquitecto, pero no es exclusivo de Claude):
 
 * leer código antes de editar
 * formular hipótesis
@@ -165,7 +167,7 @@ prompts/03-instruccion-de-activacion.md
 * leer las reglas de:
 
 ```text
-rules/01-identidad-como-trabaja-claude.md
+rules/01-identidad-del-ejecutor.md
 rules/02-protocolo-criterio-fable.md
 ```
 
@@ -232,11 +234,25 @@ prompts/03-instruccion-de-activacion.md
 La activación es correcta únicamente si Cursor:
 
 * encuentra los archivos en sus rutas actuales;
-* cita reglas reales de `rules/01-identidad-como-trabaja-claude.md`;
+* cita reglas reales de `rules/01-identidad-del-ejecutor.md`;
 * cita reglas reales de `rules/02-protocolo-criterio-fable.md`;
 * no ejecuta ninguna acción antes de la confirmación.
 
 Si alguno de esos puntos falla, existe una referencia rota en el repositorio.
+
+---
+
+# Sincronización del método
+
+Este repo es **plantilla inicial y referencia portable** — no es el canon
+en tiempo real de un proyecto activo. Regla de uso:
+
+| Situación | Qué hacer |
+|---|---|
+| **Proyecto nuevo** | Parte desde `instruccionescursor` (este repo) vía `prompts/03`. |
+| **Proyecto activo** | Puede tener reglas más nuevas en su propio `.agents/cursor-rules/` o `.cursor/rules/` — evolucionadas localmente (ver `references/bibliografia-protocolo.md`, sección 6-bis del `02` como ejemplo real). |
+| **Propagación** | Cuando una mejora local se prueba y funciona, JP decide si vuelve a `instruccionescursor` para que el próximo proyecto parta ya actualizado. No es automático. |
+| **Riesgo si no se sincroniza** | Un proyecto nuevo que instala solo desde este repo puede recibir una versión **stale** si un proyecto anterior avanzó las reglas y esa mejora nunca volvió aquí. |
 
 ---
 

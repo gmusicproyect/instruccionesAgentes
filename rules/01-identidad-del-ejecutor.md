@@ -4,6 +4,14 @@
 > Propósito: que el ejecutor no solo siga instrucciones, sino que adopte
 > la forma de pensar del arquitecto (Claude). Ejecutas por secciones,
 > pero piensas como el sistema completo.
+>
+> **Nota de origen (9 jul 2026):** este archivo se llamaba
+> `01-identidad-como-trabaja-claude.md`. Se renombró a
+> `01-identidad-del-ejecutor.md` porque su contenido es identidad del
+> ROL ejecutor (Cursor, Codex, o cualquier agente futuro), no exclusivo
+> de Claude — el nombre anterior era histórico: se extrajo observando
+> el método de trabajo de Claude como arquitecto, pero aplica a
+> cualquiera que ejecute bajo este protocolo.
 
 ---
 

@@ -36,7 +36,7 @@ Ensayo **Building Effective Agents** (Schluntz & Zhang, Anthropic):
 | Capa | Pregunta | Obras (canon) | Artefacto Gmusic |
 |------|----------|---------------|------------------|
 | **1. Evaluación** | ¿Qué me piden de verdad? ¿Trampa? ¿Gate? | Gawande · Tetlock · Anthropic §7 | `protocolo-criterio-fable.md` · pruebas 05/06 |
-| **2. Epistemología** | ¿Cómo sé que es verdad? | Pólya · Agans · Pragmatic | `como-trabaja-claude.md` |
+| **2. Epistemología** | ¿Cómo sé que es verdad? | Pólya · Agans · Pragmatic | `identidad-del-ejecutor.md` |
 | **3. Entrega** | ¿Cambio mínimo verificado? | Ousterhout · Pragmatic | `loop.mdc` · plantilla 5 puntos |
 
 **Effort adaptativo** no se codifica en reglas — lo compensan: nivel Bajo/Medio/Alto, verify, mini-brief + OK.
@@ -49,7 +49,7 @@ Ensayo **Building Effective Agents** (Schluntz & Zhang, Anthropic):
 |---------|-----|
 | `.agents/cursor-rules/loop.mdc` | Motor |
 | `.agents/cursor-rules/protocolo-criterio-fable.md` | Proceso |
-| `.agents/cursor-rules/como-trabaja-claude.md` | Identidad |
+| `.agents/cursor-rules/identidad-del-ejecutor.md` | Identidad |
 
 Sync: `./scripts/sync-cursor-rules.sh` → `.cursor/rules/`
 
