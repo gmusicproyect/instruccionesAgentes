@@ -1,6 +1,6 @@
 # Instrucciones Agentes — Sistema de Identidad y Método del Ejecutor
 
-Repositorio oficial del protocolo de trabajo para **Cursor Agent Mode** en los proyectos de JP.
+Repositorio oficial del protocolo de trabajo para **Agent Mode** en los proyectos de JP.
 
 La metodología vive en estos archivos, **no en un modelo específico**. El arquitecto es un rol, no una IA concreta. El objetivo es que cualquier ejecutor (Cursor hoy, otro agente mañana) trabaje con el mismo estándar de análisis, ejecución, verificación y reporte.
 
