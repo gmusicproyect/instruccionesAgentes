@@ -1,4 +1,4 @@
-# Instrucciones Cursor — Sistema de Identidad y Método del Ejecutor
+# Instrucciones Agentes — Sistema de Identidad y Método del Ejecutor
 
 Repositorio oficial del protocolo de trabajo para **Cursor Agent Mode** en los proyectos de JP.
 
