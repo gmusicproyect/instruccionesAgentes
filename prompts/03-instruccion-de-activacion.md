@@ -152,7 +152,7 @@ Repite el bloque o pide que abra los archivos de nuevo.
 ## Verificación de FASE B (JP)
 
 FASE B es correcta únicamente si el ejecutor:
-- (a) solo corrió tras **OK INSTALA** explícito;
+- (a) solo corrió tras **OK INSTALA** exacto;
 - (b) reportó lista de archivos creados/modificados;
 - (c) declaró comandos de verificación o NO DEFINIDO (sin inventar);
 - (d) citó desde un archivo ya instalado en disco.
