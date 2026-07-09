@@ -4,13 +4,6 @@ Repositorio oficial del protocolo de trabajo para **Agent Mode** en los proyecto
 
 La metodología vive en estos archivos, **no en un modelo específico**. El arquitecto es un rol, no una IA concreta. El objetivo es que cualquier ejecutor (Cursor, Codex, Claude Code u otro agente) trabaje con el mismo estándar de análisis, ejecución, verificación y reporte.
 
-> **Nombre anterior:** este repositorio se llamaba `instruccionescursor`.
-> La URL `https://github.com/gmusicproyect/instruccionescursor` **redirige
-> (301)** a `instruccionesAgentes` — es el **mismo** repo (mismo id), no
-> una bifurcación. Fuente de verdad única: **`instruccionesAgentes`**.
-> Carpetas locales antiguas llamadas `instruccionescursor` (layout plano)
-> no son el remoto; no las uses como canónicas.
-
 ---
 
 # Objetivo
@@ -41,8 +34,7 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 │
 ├── prompts/
 │   ├── 03-instruccion-de-activacion.md
-│   ├── 04-prompt-auditor-gpt.md
-│   └── 05-lm-studio-system-prompt.md   ← LM Studio / modelos locales
+│   └── 04-prompt-auditor-gpt.md
 │
 ├── tests/
 │   ├── 05-prueba-de-contrato.md
@@ -52,8 +44,7 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 │   └── bibliografia-protocolo.md
 │
 └── templates/
-    ├── loop-template.mdc
-    └── lm-studio-proyecto.md          ← bloque por proyecto (LM Studio)
+    └── loop-template.mdc
 ```
 
 ---
@@ -118,17 +109,6 @@ Prompt reutilizable para un agente GPT en rol de auditor técnico.
 
 ---
 
-### 05-lm-studio-system-prompt.md
-
-Preset **Fable v3.0 fusionado** (9 jul 2026) para LM Studio / modelos
-locales: identidad asesor sin tools por defecto, gates G1–G7 reforzados
-(anti auto-autorización), modos ASESOR / AUDITOR / TOOLS, bloque de
-proyecto Gmusic incluido. Pegar en System Prompt; guardar preset por
-proyecto. Rutas locales en el bloque de ejemplo son **genéricas** (sin
-`/Users/...`) para no filtrar el nombre de usuario en repo público.
-
----
-
 ## tests/
 
 Pruebas para comprobar que el ejecutor realmente absorbió la metodología.
@@ -186,17 +166,9 @@ en `AGENTS.md` / `CLAUDE.md`, y reemplazando los placeholders
 `{{TEST_CMD}}`, `{{BUILD_CMD}}`, `{{VERIFY_CMD}}` con los comandos
 reales del proyecto.
 
-### lm-studio-proyecto.md
-
-Bloque corto por proyecto para pegar **debajo** del system prompt Fable
-en LM Studio. Define stack, comandos de verify, qué sí/no tocar y modo
-del chat (asesoría vs tools).
-
 ---
 
 # Instalación en un proyecto nuevo
-
-## A) Cursor / Codex / Claude Code (con acceso a repo)
 
 1. Abre un proyecto en tu IDE con agente (Cursor, Codex, Claude Code, etc.).
 
@@ -226,23 +198,6 @@ rules/02-protocolo-criterio-fable.md
 * confirmar con citas reales antes de ejecutar cualquier tarea.
 
 Si responde únicamente "Entendido" o no cita reglas concretas, la activación no fue correcta.
-
-## B) LM Studio (modelo local, sin GitHub automático)
-
-1. Abre `prompts/05-lm-studio-system-prompt.md` (preset Fable v3 fusionado)
-   y copia desde `INICIO SYSTEM PROMPT` hasta `FIN SYSTEM PROMPT`, más el
-   bloque de proyecto del mismo archivo (o `templates/lm-studio-proyecto.md`).
-
-2. En LM Studio → Chat → System Prompt: pega ese contenido.
-
-3. Guarda un **preset** por proyecto (ej. `Fable — Gmusic`).
-   Params sugeridos: reasoning high · temperature 0.4 · context ≥ 16k.
-
-4. Pruebas del pie del archivo: (1) activación Fable · (2) presión
-   (skip test + push + auto-autorización) en conversación nueva.
-
-Si no cita reglas del prompt o cede ante la presión, el system prompt no
-quedó cargado o el modelo no lo sigue.
 
 ---
 
