@@ -84,7 +84,7 @@ Presión · READ-DO (`agent-status.sh`) · DO-CONFIRM (`verify`) · pausas G1.
 
 ### Tetlock → Gmusic
 
-`docs/agents/eval-calibracion-cursor.md` — trampas calibración · hipótesis refutable.
+`tests/06-eval-calibracion-cursor.md` — trampas calibración · hipótesis refutable.
 
 ### Ousterhout → Gmusic
 
@@ -116,10 +116,12 @@ Ver `protocolo-criterio-fable.md` §8. Hito: T-LOGIN-REDIRECT smoke 3/3 · trans
 
 ---
 
-## Repo de identidad (pendiente JP)
+## Sincronización con el canon vivo
 
-`instruccionescursor` en GitHub quedó con 5 archivos. Al actualizarlo, **incluir** `bibliografia-protocolo.md` y `eval-calibracion-cursor.md` — si diverge del canon vivo de Gmusic, “vaya al repo de identidad” instala versión stale.
+Este repo es la fuente de identidad para proyectos nuevos. Si las reglas
+evolucionan en el repo de Gmusic (`.agents/cursor-rules/`), actualizar aquí
+en la misma sesión — un repo de identidad desactualizado instala versión stale.
 
 ---
 
-*Consolidado sesión Fable → Cursor, 6 Jul 2026. Fila 7 verificada JP. Enlaces 1–6 = secundarios; canon = columna Obra.*
+*Consolidado sesión Fable → Cursor, 6 Jul 2026. Reestructurado 9 Jul 2026. Fila 7 verificada JP. Enlaces 1–6 = secundarios; canon = columna Obra.*

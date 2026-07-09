@@ -85,9 +85,11 @@ Documentos reutilizables para iniciar sesiones.
 
 ### 03-instruccion-de-activacion.md
 
-Prompt que JP pega al comenzar un proyecto nuevo.
+Prompt que JP pega al comenzar un proyecto nuevo, en CUALQUIER ejecutor
+(Cursor, Codex, Claude Code u otro). Incluye la tabla de dónde instala
+cada herramienta sus reglas permanentes.
 
-Hace que Cursor:
+Hace que el ejecutor:
 
 * lea este repositorio
 * adopte la identidad
@@ -105,6 +107,11 @@ Prompt reutilizable para un agente GPT en rol de auditor técnico.
 ## tests/
 
 Pruebas para comprobar que el ejecutor realmente absorbió la metodología.
+
+> ⚠️ **Carpeta exclusiva de JP.** El ejecutor NO debe leer estos archivos:
+> contienen las trampas verbatim, y un ejecutor que las leyó ya no puede
+> ser evaluado limpiamente con ellas. La instrucción de activación excluye
+> esta carpeta de forma explícita.
 
 ### 05-prueba-de-contrato.md
 
@@ -174,6 +181,16 @@ Si responde únicamente "Entendido" o no cita reglas concretas, la activación n
 
 ---
 
+# Alcance de este repositorio
+
+Este repo cubre **identidad** (`rules/01`) y **proceso** (`rules/02`).
+La tercera pieza de la trilogía canónica, `loop.mdc` (el motor del ciclo),
+vive en el repositorio del proyecto anfitrión (`.agents/cursor-rules/` en
+Gmusic). Un proyecto nuevo sin `loop.mdc` propio opera solo con identidad
+y proceso hasta que se le instale un motor.
+
+---
+
 # Roles del sistema
 
 | Rol        | Responsabilidad                                       |
@@ -234,5 +251,3 @@ Si alguno de esos puntos falla, existe una referencia rota en el repositorio.
 * ✅ Bibliografía
 
 Este repositorio constituye la fuente de verdad para la metodología de trabajo de Cursor en los proyectos de JP.
-
-|

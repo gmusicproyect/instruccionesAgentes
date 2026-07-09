@@ -12,7 +12,7 @@
 | Rol | Agente | Responsabilidad |
 |---|---|---|
 | Arquitecto / Validador | Claude | Diseña spec, define criterios de aceptación, valida cierre |
-| Motor / Ejecutor | Cursor Agent Mode | Implementa código según spec |
+| Motor / Ejecutor | Cursor Agent Mode (o equivalente: Codex, Claude Code) | Implementa código según spec |
 | Auditor | Agentes GPT | Revisión cruzada de calidad y seguridad |
 | Autoridad final | JP | Autoriza commits, push y toda acción irreversible |
 
