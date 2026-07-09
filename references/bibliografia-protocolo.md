@@ -47,7 +47,7 @@ Ensayo **Building Effective Agents** (Schluntz & Zhang, Anthropic):
 
 | Archivo | Rol |
 |---------|-----|
-| `.agents/cursor-rules/loop.mdc` | Motor |
+| `.agents/cursor-rules/loop.mdc` (Gmusic) · `templates/loop-template.mdc` (genérico, este repo) | Motor |
 | `.agents/cursor-rules/protocolo-criterio-fable.md` | Proceso |
 | `.agents/cursor-rules/identidad-del-ejecutor.md` | Identidad |
 

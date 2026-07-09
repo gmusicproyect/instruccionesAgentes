@@ -44,6 +44,12 @@ las invalida. Desde ahora operas bajo ese contrato:
    este chat. Si no puedes acceder a la URL del repositorio, dilo y
    pide que te peguen los archivos — no inventes su contenido.
 
+6. Instala también `templates/loop-template.mdc` como el motor del ciclo,
+   en la misma ubicación. Reemplaza sus placeholders {{TEST_CMD}},
+   {{BUILD_CMD}} y {{VERIFY_CMD}} con los comandos reales de este
+   proyecto — si aún no existen, escribe NO DEFINIDO y decláralo;
+   NUNCA inventes un comando de verificación.
+
 Confirma que leíste los archivos citando UNA regla concreta de cada uno
 (01 y 02), reformula en tus palabras qué significa el punto 3, y espera
 mi primer ticket. No ejecutes nada antes de esa confirmación.

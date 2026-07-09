@@ -40,8 +40,11 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 │   ├── 05-prueba-de-contrato.md
 │   └── 06-eval-calibracion-cursor.md
 │
-└── references/
-    └── bibliografia-protocolo.md
+├── references/
+│   └── bibliografia-protocolo.md
+│
+└── templates/
+    └── loop-template.mdc
 ```
 
 ---
@@ -150,6 +153,21 @@ Explica el fundamento metodológico del sistema y relaciona cada regla con sus o
 
 ---
 
+## templates/
+
+### loop-template.mdc
+
+El **motor del ciclo** en versión genérica: la regla ejecutable
+(ESTADO → RUTINA → VERIFICACIÓN → CRITERIO DE SALIDA) que convierte la
+prosa de `01`+`02` en un ciclo mecánico que corre en cada sesión.
+
+Se instala copiándolo a `.cursor/rules/loop.mdc` (Cursor) o integrándolo
+en `AGENTS.md` / `CLAUDE.md`, y reemplazando los placeholders
+`{{TEST_CMD}}`, `{{BUILD_CMD}}`, `{{VERIFY_CMD}}` con los comandos
+reales del proyecto.
+
+---
+
 # Instalación en un proyecto nuevo
 
 1. Abre un proyecto en Cursor.
@@ -185,11 +203,13 @@ Si responde únicamente "Entendido" o no cita reglas concretas, la activación n
 
 # Alcance de este repositorio
 
-Este repo cubre **identidad** (`rules/01`) y **proceso** (`rules/02`).
-La tercera pieza de la trilogía canónica, `loop.mdc` (el motor del ciclo),
-vive en el repositorio del proyecto anfitrión (`.agents/cursor-rules/` en
-Gmusic). Un proyecto nuevo sin `loop.mdc` propio opera solo con identidad
-y proceso hasta que se le instale un motor.
+Este repo cubre la trilogía completa: **identidad** (`rules/01`),
+**proceso** (`rules/02`) y **motor** (`templates/loop-template.mdc`,
+versión genérica con placeholders). Cada proyecto instala el template
+del loop con sus propios comandos de verificación; la versión
+especializada de Gmusic vive en su repo (`.agents/cursor-rules/loop.mdc`).
+Un proyecto puede operar solo con `01`+`02` si aún no define comandos
+de verificación, pero el ciclo completo requiere las tres piezas.
 
 ---
 
