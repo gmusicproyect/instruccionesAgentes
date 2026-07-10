@@ -1,10 +1,12 @@
-# Bloque de proyecto — LM Studio (pegar debajo del System Prompt Fable)
+# Bloque de proyecto — LM Studio (plantilla vacía)
 
-> JP: copia, rellena los campos entre `[...]` y pégalo **debajo** del
-> system prompt Fable en el mismo chat / preset.
+> Pegar **debajo** del system prompt Fable genérico
+> (`prompts/05-lm-studio-system-prompt.md`).
 >
-> Un preset = Fable genérico + este bloque. Así el modelo sabe *cómo*
-> trabajar (Fable) y *en qué* proyecto está.
+> Un preset = Fable genérico + este bloque rellenado.
+> El protocolo (cómo actuar) no cambia; solo cambia este bloque por proyecto.
+>
+> **No** incluyas rutas con `/Users/nombre/` en copias públicas.
 
 ---
 
@@ -13,111 +15,56 @@
 ```markdown
 # PROYECTO ACTIVO
 
-**Nombre:** [ej. Gmusic Academy]
-**Ruta local:** [raíz del repo]/Página de cursos de música
-**Stack:** [ej. Vite + React + Express + Prisma]
-**Repo / rama:** [ej. gmusicproyect/proyectogmusic · main]
+**Nombre:** [nombre del proyecto]
+**Ruta local:** [raíz del repo — genérica, sin /Users/...]
+**Stack:** [lenguajes / frameworks]
+**Repo / rama:** [org/repo · rama]
 
 ## Comandos de verificación (no inventar)
 
-- TEST: [ej. npm run test] o NO DEFINIDO
-- BUILD: [ej. npm run build] o NO DEFINIDO
-- VERIFY: [ej. npm run verify] o NO DEFINIDO
+- TEST: [comando] o NO DEFINIDO
+- BUILD: [comando] o NO DEFINIDO
+- VERIFY: [comando] o NO DEFINIDO
 
 ## Archivos de estado (si existen)
 
-- Estado: `.agents/PROJECT_STATUS.md`
-- Decisiones: `.agents/DECISIONS.md`
-- Reglas Cursor (si el proyecto las tiene): `.agents/cursor-rules/`
+- Estado: `.agents/PROJECT_STATUS.md` (o equivalente)
+- Decisiones: `.agents/DECISIONS.md` (o equivalente)
+- Reglas del ejecutor: [ruta si aplica]
 
 ## Qué SÍ puedes tocar en este chat
 
-- [ej. UI de admin, docs/operations, scripts/ops]
+- [lista]
 
-## Qué NO tocar sin OK explícito de JP
+## Qué NO tocar sin OK explícito del humano
 
-- [ej. auth, pagos, schema Prisma, routing global, secrets, Track B]
+- [lista: auth, pagos, schema, secrets, prod, etc.]
 
 ## Contexto corto (5–10 líneas máx.)
 
-[Qué está vivo en prod, qué ticket importa ahora, qué NO reabrir]
+[Qué está vivo, qué ticket importa, qué NO reabrir]
 
 ## Modo de este chat
 
-- [ ] Solo asesoría (planes, diffs, sin fingir edición)
-- [ ] Ejecución guiada (JP pega archivos / corre comandos)
+- [ ] Solo asesoría (planes, diffs, sin fingir edición)  ← default
+- [ ] Ejecución guiada (humano pega archivos / corre comandos)
 - [ ] Con tools/MCP (leer/editar disco si están disponibles)
 
-Al inicio de cada sesión: resume en 3 viñetas lo que entiendes del
-proyecto y pregunta A/B cuál es el ticket de hoy.
+Al inicio de cada sesión: 3 viñetas de contexto + pregunta A/B del ticket
+de hoy. Si no hay ticket, pregunta cuál es (A/B + recomendación).
 ```
 
 ---
 
-## Ejemplo rellenado — Gmusic (Track A)
-
-```markdown
-# PROYECTO ACTIVO
-
-**Nombre:** Gmusic Academy (Track A)
-**Ruta local:** [raíz del repo]/Página de cursos de música
-**Stack:** Vite + React + Express + Prisma · Vercel + Render + Supabase
-**Repo / rama:** gmusicproyect/proyectogmusic · main
-
-## Comandos de verificación (no inventar)
-
-- TEST: npm run test
-- BUILD: npm run build
-- VERIFY: npm run verify
-
-## Archivos de estado (si existen)
-
-- Estado: `.agents/PROJECT_STATUS.md`
-- Decisiones: `.agents/DECISIONS.md`
-- Reglas: `.agents/cursor-rules/` (01, 02, loop.mdc)
-
-## Qué SÍ puedes tocar en este chat
-
-- Docs, specs, briefs para Opus/Cursor
-- Análisis de admin / pedagogía / UX
-- Scripts ops solo si JP autoriza
-
-## Qué NO tocar sin OK explícito de JP
-
-- Auth, pagos, schema Prisma, routing URL global
-- R-001 / R-002, Track B (Next/Sanity)
-- Commit / push / apply prod / secrets
-- Mezclar tickets (admin password + producto en el mismo diff)
-
-## Contexto corto
-
-- Track A live: landing, funnel demo, zona alumno, admin R-008.
-- T-PUB-02: B3 «La menor» con microejercicios en prod (smoke OK).
-- Admin actual = bloques de 5 etapas; JP quiere evolucionar a composer
-  tipo Simple Guitar (tarjeta → habilidad → puntos video/juego) — eso
-  es spec Opus, no improvisar schema.
-- Visual D Canva: SUPERSEDED. No reabrir.
-
-## Modo de este chat
-
-- [x] Solo asesoría (planes, diffs, sin fingir edición)
-- [ ] Ejecución guiada
-- [ ] Con tools/MCP
-
-Al inicio: 3 viñetas de contexto + pregunta A/B del ticket de hoy.
-```
-
----
-
-## Ejemplo mínimo — proyecto nuevo
+## Ejemplo mínimo (placeholders, sin producto concreto)
 
 ```markdown
 # PROYECTO ACTIVO
 
 **Nombre:** [nombre]
-**Ruta local:** [ruta]
+**Ruta local:** [raíz del repo]
 **Stack:** [stack]
-**Repo / rama:** [repo · rama]
+**Repo / rama:** [org/repo · rama]
 
 ## Comandos
 
@@ -128,7 +75,7 @@ Al inicio: 3 viñetas de contexto + pregunta A/B del ticket de hoy.
 ## Qué SÍ / NO
 
 - SÍ: explorar, proponer spec, diffs pequeños
-- NO: commit, push, prod, secrets sin OK de JP
+- NO: commit, push, prod, secrets sin OK del humano
 
 ## Contexto
 

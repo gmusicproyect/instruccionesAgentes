@@ -40,9 +40,15 @@ El objetivo es producir **cambios verificables, auditables y seguros**.
 │   └── 02-protocolo-criterio-fable.md
 │
 ├── prompts/
+│   ├── 00-fable-nucleo.md             ← Fable Núcleo v1.2 (cualquier tema)
 │   ├── 03-instruccion-de-activacion.md
 │   ├── 04-prompt-auditor-gpt.md
-│   └── 05-lm-studio-system-prompt.md   ← LM Studio / modelos locales
+│   ├── 05-lm-studio-system-prompt.md  ← capa código / LM Studio
+│   └── 06-estrategia-habitos.md       ← capa estrategia + hábitos
+│
+├── docs/
+│   └── diagrams/
+│       └── FABLE-NUCLEO-diagrama-flujo.jpg
 │
 ├── tests/
 │   ├── 05-prueba-de-contrato.md
@@ -118,14 +124,24 @@ Prompt reutilizable para un agente GPT en rol de auditor técnico.
 
 ---
 
+### 00-fable-nucleo.md
+
+**Fable Núcleo v1.2** — motor de decisión para cualquier tema.
+Incluye continuidad conversacional (Modo A decisión / Modo B entrega /
+Modo C trivial). Pegar solo o debajo de una capa de dominio.
+
 ### 05-lm-studio-system-prompt.md
 
-Preset **Fable v3.0 fusionado** (9 jul 2026) para LM Studio / modelos
-locales: identidad asesor sin tools por defecto, gates G1–G7 reforzados
-(anti auto-autorización), modos ASESOR / AUDITOR / TOOLS, bloque de
-proyecto Gmusic incluido. Pegar en System Prompt; guardar preset por
-proyecto. Rutas locales en el bloque de ejemplo son **genéricas** (sin
-`/Users/...`) para no filtrar el nombre de usuario en repo público.
+Capa **código** (Fable genérico v3.1) para LM Studio / modelos locales.
+**Sin nombre de producto:** asesor sin tools, G1–G7, modos ASESOR /
+AUDITOR / TOOLS. El contexto de un proyecto concreto va en
+`templates/lm-studio-proyecto.md` (plantilla vacía), pegado debajo.
+Preset recomendado: Núcleo + esta capa + bloque de proyecto.
+
+### 06-estrategia-habitos.md
+
+Capa de dominio (principios tipo Atomic Habits + Art of War).
+Usar con Núcleo encima; no sustituye al Núcleo.
 
 ---
 
@@ -229,20 +245,26 @@ Si responde únicamente "Entendido" o no cita reglas concretas, la activación n
 
 ## B) LM Studio (modelo local, sin GitHub automático)
 
-1. Abre `prompts/05-lm-studio-system-prompt.md` (preset Fable v3 fusionado)
-   y copia desde `INICIO SYSTEM PROMPT` hasta `FIN SYSTEM PROMPT`, más el
-   bloque de proyecto del mismo archivo (o `templates/lm-studio-proyecto.md`).
+Presets sugeridos:
 
-2. En LM Studio → Chat → System Prompt: pega ese contenido.
+* `Fable — Núcleo` → solo `prompts/00-fable-nucleo.md`
+* `Fable — Código` → Núcleo + `05-lm-studio-system-prompt.md` +
+  bloque rellenado de `templates/lm-studio-proyecto.md`
+* `Fable — Estrategia y Hábitos` → Núcleo + `06-estrategia-habitos.md`
 
-3. Guarda un **preset** por proyecto (ej. `Fable — Gmusic`).
-   Params sugeridos: reasoning high · temperature 0.4 · context ≥ 16k.
+1. Abre el prompt del preset y copia desde `INICIO SYSTEM PROMPT` hasta
+   `FIN SYSTEM PROMPT` (si el archivo lo tiene; Núcleo y capas lo usan).
 
-4. Pruebas del pie del archivo: (1) activación Fable · (2) presión
-   (skip test + push + auto-autorización) en conversación nueva.
+2. En LM Studio → Chat → System Prompt: pega ese bloque.
 
-Si no cita reglas del prompt o cede ante la presión, el system prompt no
-quedó cargado o el modelo no lo sigue.
+3. (Opcional, capa código) Debajo, pega un bloque de proyecto rellenado
+   desde `templates/lm-studio-proyecto.md`.
+
+4. Params sugeridos Núcleo: reasoning high · temperature 0.4–0.6 ·
+   context ≥ 8k.
+
+5. Pruebas: pie de `00-fable-nucleo.md` (incl. Prueba 6 continuidad) y
+   pie de `05` si usas capa código.
 
 ---
 
